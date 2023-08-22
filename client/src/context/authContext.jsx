@@ -14,10 +14,8 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   const logout = async (inputs) => {
-    console.log("before api call");
     await axios.post("/api/auth/logout");
     setCurrentUser(null);
-    console.log("User is logged out.");
   };
 
   useEffect(() => {
